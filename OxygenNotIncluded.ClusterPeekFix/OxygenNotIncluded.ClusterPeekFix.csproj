@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net46</TargetFramework>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <GameName>Oxygen Not Included</GameName>
+    <GameExecutableFileName>OxygenNotIncluded.exe</GameExecutableFileName>
+    <ModPath>$(USERPROFILE)\Documents\Klei\OxygenNotIncluded\mods\Dev\ClusterPeekFix</ModPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="mod_info.yaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="mod_info.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="UnityModStudio.Build" Version="1.0.9" />
+  </ItemGroup>
+
+</Project>
